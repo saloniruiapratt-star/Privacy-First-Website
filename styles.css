@@ -261,51 +261,53 @@ body {
     box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
 }
 
-/* App Header */
-.app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #e9ecef;
-}
 
-.app-header h1 {
-    color: #2c3e50;
-    font-size: 1.8rem;
-    font-weight: 300;
-}
-
-.user-info {
+/* WebAuthn specific styles */
+.webauthn-buttons {
     display: flex;
-    align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
-.user-info span {
-    color: #6c757d;
-    font-weight: 500;
-}
-
-.user-info button {
-    padding: 8px 16px;
-    background: #dc3545;
+.webauthn-buttons button {
+    flex: 1;
+    min-width: 140px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
-.user-info button:hover {
-    background: #c82333;
+.webauthn-buttons button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
 }
 
-/* Upload Section */
-.upload-section {
-    margin-bottom: 40px;
+.webauthn-buttons button:hover::before {
+    left: 100%;
+}
+
+.webauthn-buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.webauthn-buttons button:active {
+    transform: translateY(-1px);
 }
 
 .upload-section h2 {
