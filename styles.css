@@ -85,7 +85,7 @@ body {
 
 /* Authentication Styles */
 .auth-container {
-    max-width: 420px;
+    max-width: 450px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -129,7 +129,7 @@ body {
 
 .auth-tabs {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
