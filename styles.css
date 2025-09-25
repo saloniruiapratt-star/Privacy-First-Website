@@ -267,7 +267,7 @@ body {
 /* WebAuthn specific styles */
 .webauthn-buttons {
     display: flex;
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
     justify-content: center;
 }
