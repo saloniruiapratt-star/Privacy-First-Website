@@ -44,9 +44,10 @@
                 
                 <!-- WebAuthn Form -->
                 <div id="webauthn-form" class="auth-form">
-                    <button onclick="webauthnLogin()">Login with WebAuthn</button>
-                    <button onclick="webauthnRegister()">Register with WebAuthn</button>
-                </div>
+                    <div class="webauthn-buttons">
+                        <button onclick="webauthnLogin()" title="Login with Web Authentication">Login with Web</button>
+                        <button onclick="webauthnRegister()" title="Register with Web Authentication">Register with Web</button>
+                    </div>
             </div>
         </div>
         
@@ -71,7 +72,7 @@
                             <polyline points="7,10 12,15 17,10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        <p>Click to upload or drag and drop your face photo</p>
+                        <p>Drag and drop your face photo</p>
                         <p class="upload-hint">Supports JPG, PNG, and other image formats</p>
                     </div>
                 </div>
